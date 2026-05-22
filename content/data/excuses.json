@@ -1,0 +1,38 @@
+{
+  "actions": [
+    "Adjourned the hearing",
+    "Recused from the case",
+    "Accepted sealed cover",
+    "Dismissed the PIL",
+    "Transferred the case",
+    "Ignored the evidence",
+    "Lectured the victim",
+    "Issued contempt notice",
+    "Took suo motu cognizance",
+    "Granted bail to the powerful"
+  ],
+  "excuses": [
+    "bench was unavailable",
+    "matter was too complex",
+    "needed more time to study",
+    "judge was on leave",
+    "advocate was absent",
+    "file was misplaced",
+    "national security concerns",
+    "previous judge retired",
+    "it's a festive season",
+    "AC in courtroom wasn't working"
+  ],
+  "results": [
+    "Next date: 6 months later",
+    "Case transferred to another bench",
+    "Petitioner gave up and went home",
+    "Accused roams free",
+    "Victim lost hope in the system",
+    "Lawyers got richer",
+    "Nothing happened. Again.",
+    "Government celebrated quietly",
+    "Media moved on to next story",
+    "Justice remained pending"
+  ]
+}

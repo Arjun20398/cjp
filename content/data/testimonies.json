@@ -1,0 +1,50 @@
+[
+  {
+    "quote": "My land dispute has been in court since before I was born. I'm 45 now. The judge who started the case has retired, joined politics, and is probably governing a state somewhere.",
+    "author": "Rajesh K., Delhi",
+    "caseType": "Land Dispute",
+    "years": "45+"
+  },
+  {
+    "quote": "Filed an RTI about a judge's assets. Got a contempt notice instead. The system protects its own.",
+    "author": "Anonymous, Mumbai",
+    "caseType": "RTI Application",
+    "years": "Terminated"
+  },
+  {
+    "quote": "My father died waiting for his case to be heard. I inherited the case along with the house. The house is gone now — sold to pay lawyer fees. The case continues.",
+    "author": "Meera S., Patna",
+    "caseType": "Property Case",
+    "years": "30+"
+  },
+  {
+    "quote": "The judge who denied my bail was the chief guest at the complainant's son's wedding. I found out after spending 8 months in jail.",
+    "author": "Vikram T., Lucknow",
+    "caseType": "Bail Matter",
+    "years": "3"
+  },
+  {
+    "quote": "Three adjournments because the judge was 'on leave.' Fourth hearing — the judge got transferred. Fifth hearing — new judge wanted to start from scratch. It's been 7 years for a cheque bounce case.",
+    "author": "Priya D., Bengaluru",
+    "caseType": "NI Act §138",
+    "years": "7"
+  },
+  {
+    "quote": "I was told my case is 'next' for 11 consecutive hearings. I've started bringing lunch.",
+    "author": "Sunil M., Jaipur",
+    "caseType": "Consumer Complaint",
+    "years": "4"
+  },
+  {
+    "quote": "Watched a corporate giant get 6 adjournments in a pollution case. When a farmer asked for one, he was told the court doesn't have time. Justice is blind, but it recognizes money.",
+    "author": "Anita R., Bhopal",
+    "caseType": "Environmental",
+    "years": "12"
+  },
+  {
+    "quote": "The sealed cover in my case apparently contained evidence I couldn't see. I was convicted based on it. Still don't know what was in it.",
+    "author": "Name Withheld, Chennai",
+    "caseType": "Criminal",
+    "years": "9"
+  }
+]

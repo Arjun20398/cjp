@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Justice A",
+    "verdict": "Upheld controversial electoral bonds scheme",
+    "verdictYear": "2019",
+    "retired": "Nov 2019",
+    "postRetirement": "Rajya Sabha MP (ruling party)",
+    "postYear": "Mar 2020",
+    "gap": "4 months"
+  },
+  {
+    "name": "Justice B",
+    "verdict": "Dismissed PIL challenging CAA",
+    "verdictYear": "2020",
+    "retired": "Sep 2020",
+    "postRetirement": "Governor of northeastern state",
+    "postYear": "Feb 2021",
+    "gap": "5 months"
+  },
+  {
+    "name": "Justice C",
+    "verdict": "Cleared land acquisition for ruling party's project",
+    "verdictYear": "2017",
+    "retired": "Oct 2018",
+    "postRetirement": "NHRC Chairperson",
+    "postYear": "Apr 2019",
+    "gap": "6 months"
+  },
+  {
+    "name": "Justice D",
+    "verdict": "Gave clean chit in encounter case",
+    "verdictYear": "2014",
+    "retired": "Jun 2014",
+    "postRetirement": "Joined political party, contested elections",
+    "postYear": "Oct 2014",
+    "gap": "4 months"
+  },
+  {
+    "name": "Justice E",
+    "verdict": "Denied bail to political dissenters",
+    "verdictYear": "2021",
+    "retired": "Aug 2022",
+    "postRetirement": "Tribunal Chairman (cabinet rank)",
+    "postYear": "Jan 2023",
+    "gap": "5 months"
+  }
+]

@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0c0f1a;
+  --foreground: #e8e4dc;
+  --accent: #c53030;
+  --gold: #c5a44e;
+  --muted: #b5ada3;
+  --card-bg: #141828;
+  --card-bg-alt: #1a1f33;
+  --border: #2a2f45;
+  --parchment: #f5f0e6;
+  --parchment-dark: #e8e0d0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-muted: var(--muted);
+  --color-card-bg: var(--card-bg);
+  --color-card-bg-alt: var(--card-bg-alt);
+  --color-border: var(--border);
+  --color-parchment: var(--parchment);
+  --color-parchment-dark: var(--parchment-dark);
+  --font-sans: "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Georgia", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-mono: "SF Mono", "Fira Code", "Consolas", monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideSlot {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

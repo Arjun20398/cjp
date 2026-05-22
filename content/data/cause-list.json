@@ -1,0 +1,58 @@
+[
+  {
+    "time": "10:30 AM",
+    "title": "Democracy v. Collegium System",
+    "bench": "TBD (for the last 6 years)",
+    "status": "Adjourned",
+    "statusColor": "text-accent"
+  },
+  {
+    "time": "11:00 AM",
+    "title": "Citizens v. Sealed Cover Evidence",
+    "bench": "Constitution Bench",
+    "status": "Evidence Still Sealed",
+    "statusColor": "text-gold"
+  },
+  {
+    "time": "11:30 AM",
+    "title": "Transparency v. In-House Committee",
+    "bench": "The Committee Itself",
+    "status": "Nothing Found (as usual)",
+    "statusColor": "text-muted"
+  },
+  {
+    "time": "12:00 PM",
+    "title": "Public Interest v. Private Appointment",
+    "bench": "Post-Retirement Planning Bench",
+    "status": "Adjourned Sine Die",
+    "statusColor": "text-accent"
+  },
+  {
+    "time": "02:00 PM",
+    "title": "Common Man v. VIP Bail",
+    "bench": "Single Judge (who left early)",
+    "status": "Listed for 2031",
+    "statusColor": "text-gold"
+  },
+  {
+    "time": "02:30 PM",
+    "title": "RTI Applicant v. Judicial Privacy",
+    "bench": "The RTI Was Lost Bench",
+    "status": "Disposed Of",
+    "statusColor": "text-muted"
+  },
+  {
+    "time": "03:00 PM",
+    "title": "Free Speech v. Contempt of Court",
+    "bench": "Suo Motu Bench",
+    "status": "Contempt Initiated",
+    "statusColor": "text-accent"
+  },
+  {
+    "time": "04:00 PM",
+    "title": "Justice v. Adjournment",
+    "bench": "Every Bench Ever",
+    "status": "Next Date: TBD",
+    "statusColor": "text-gold"
+  }
+]
