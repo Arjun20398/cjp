@@ -1,50 +1,23 @@
 [
   {
-    "quote": "My land dispute has been in court since before I was born. I'm 45 now. The judge who started the case has retired, joined politics, and is probably governing a state somewhere.",
-    "author": "Rajesh K., Delhi",
-    "caseType": "Land Dispute",
-    "years": "45+"
+    "quote": "There are youngsters like cockroaches, who don't get any employment or have any place in the profession. Some of them become media, some of them become social media, RTI activists and other activists, and they start attacking everyone.",
+    "author": "CJI Surya Kant",
+    "court": "Supreme Court of India",
+    "context": "Said during an open court hearing, comparing unemployed youth and activists to 'parasites' and 'cockroaches' for questioning the judiciary.",
+    "year": "2025"
   },
   {
-    "quote": "Filed an RTI about a judge's assets. Got a contempt notice instead. The system protects its own.",
-    "author": "Anonymous, Mumbai",
-    "caseType": "RTI Application",
-    "years": "Terminated"
+    "quote": "The allegations levelled against the accused... hardly constitute an offence of attempt to rape. In order to bring out a charge of attempt to rape, the prosecution must establish that it had gone beyond the stage of preparation.",
+    "author": "Justice Ram Manohar Narayan Mishra",
+    "court": "Allahabad High Court",
+    "context": "Ruled that grabbing a minor girl's breasts, loosening her garment, and trying to drag her under a culvert did not amount to 'attempt to rape' — merely 'preparation.'",
+    "year": "2025"
   },
   {
-    "quote": "My father died waiting for his case to be heard. I inherited the case along with the house. The house is gone now — sold to pay lawyer fees. The case continues.",
-    "author": "Meera S., Patna",
-    "caseType": "Property Case",
-    "years": "30+"
-  },
-  {
-    "quote": "The judge who denied my bail was the chief guest at the complainant's son's wedding. I found out after spending 8 months in jail.",
-    "author": "Vikram T., Lucknow",
-    "caseType": "Bail Matter",
-    "years": "3"
-  },
-  {
-    "quote": "Three adjournments because the judge was 'on leave.' Fourth hearing — the judge got transferred. Fifth hearing — new judge wanted to start from scratch. It's been 7 years for a cheque bounce case.",
-    "author": "Priya D., Bengaluru",
-    "caseType": "NI Act §138",
-    "years": "7"
-  },
-  {
-    "quote": "I was told my case is 'next' for 11 consecutive hearings. I've started bringing lunch.",
-    "author": "Sunil M., Jaipur",
-    "caseType": "Consumer Complaint",
-    "years": "4"
-  },
-  {
-    "quote": "Watched a corporate giant get 6 adjournments in a pollution case. When a farmer asked for one, he was told the court doesn't have time. Justice is blind, but it recognizes money.",
-    "author": "Anita R., Bhopal",
-    "caseType": "Environmental",
-    "years": "12"
-  },
-  {
-    "quote": "The sealed cover in my case apparently contained evidence I couldn't see. I was convicted based on it. Still don't know what was in it.",
-    "author": "Name Withheld, Chennai",
-    "caseType": "Criminal",
-    "years": "9"
+    "quote": "If you want to marry her we can help you. If not, you lose your job and go to jail.",
+    "author": "CJI SA Bobde",
+    "court": "Supreme Court of India",
+    "context": "Asked a 23-year-old man accused of raping a 16-year-old girl — a distant relative — whether he would marry her, offering to 'help' facilitate it.",
+    "year": "2021"
   }
 ]

@@ -1,47 +1,72 @@
 [
   {
-    "name": "Justice A",
-    "verdict": "Upheld controversial electoral bonds scheme",
-    "verdictYear": "2019",
+    "name": "Ranjan Gogoi — CJI to Rajya Sabha",
+    "verdict": "Presided over Ayodhya verdict, Rafale review dismissal, NRC matters",
+    "verdictYear": "2018–2019",
     "retired": "Nov 2019",
-    "postRetirement": "Rajya Sabha MP (ruling party)",
+    "postRetirement": "Nominated to Rajya Sabha by the government",
     "postYear": "Mar 2020",
-    "gap": "4 months"
+    "gap": "4 months",
+    "source": "https://theprint.in/politics/ex-cji-ranjan-gogois-6-years-as-rajya-sabha-mp/2857721/"
   },
   {
-    "name": "Justice B",
-    "verdict": "Dismissed PIL challenging CAA",
-    "verdictYear": "2020",
-    "retired": "Sep 2020",
-    "postRetirement": "Governor of northeastern state",
-    "postYear": "Feb 2021",
-    "gap": "5 months"
+    "name": "Abhijit Gangopadhyay — Judge to BJP Politician",
+    "verdict": "Aggressively pursued teacher recruitment scam cases; strong anti-TMC oral observations; unusual media visibility for a sitting judge",
+    "verdictYear": "2022–2024",
+    "retired": "Resigned Feb 2024",
+    "postRetirement": "Joined BJP, contested Lok Sabha elections",
+    "postYear": "Mar 2024",
+    "gap": "~3 weeks",
+    "source": "https://frontline.thehindu.com/news/kolkata-high-court-judge-abhijit-gangopadhyay-resigns-to-join-bjp/article67939000.ece"
   },
   {
-    "name": "Justice C",
-    "verdict": "Cleared land acquisition for ruling party's project",
-    "verdictYear": "2017",
-    "retired": "Oct 2018",
-    "postRetirement": "NHRC Chairperson",
-    "postYear": "Apr 2019",
-    "gap": "6 months"
+    "name": "Rohit Arya — Controversial Judge to BJP Member",
+    "verdict": "Denied bail to comedian Munawar Faruqui (2021); multiple politically sensitive judgments; accused of ideological bias while on bench",
+    "verdictYear": "2021–2023",
+    "retired": "Oct 2023",
+    "postRetirement": "Joined BJP; publicly praised BNS; aligned with Modi govt's legal reforms",
+    "postYear": "Early 2024",
+    "gap": "~3 months",
+    "source": "https://theprint.in/judiciary/from-controversial-orders-to-joining-bjp-ex-madhya-pradesh-hc-judge-rohit-arya-is-used-to-limelight/2177297/"
   },
   {
-    "name": "Justice D",
-    "verdict": "Gave clean chit in encounter case",
-    "verdictYear": "2014",
-    "retired": "Jun 2014",
-    "postRetirement": "Joined political party, contested elections",
-    "postYear": "Oct 2014",
-    "gap": "4 months"
+    "name": "Ranjan Gogoi — Rajya Sabha Performance",
+    "verdict": "Zero questions asked, zero private member bills, one debate participation, below-average attendance across 6-year tenure",
+    "verdictYear": "2020–2026",
+    "retired": "Already retired (CJI tenure ended Nov 2019)",
+    "postRetirement": "Rajya Sabha MP — widely seen as a reward, not a role",
+    "postYear": "2020–2026",
+    "gap": "6-year tenure review",
+    "source": "https://theprint.in/politics/ex-cji-ranjan-gogois-6-years-as-rajya-sabha-mp/2857721/"
   },
   {
-    "name": "Justice E",
-    "verdict": "Denied bail to political dissenters",
-    "verdictYear": "2021",
-    "retired": "Aug 2022",
-    "postRetirement": "Tribunal Chairman (cabinet rank)",
-    "postYear": "Jan 2023",
-    "gap": "5 months"
+    "name": "Yashwant Varma — Cash Scandal",
+    "verdict": "Rs 15 crore in burnt cash found at Delhi residence after Holi fire (Mar 2025); denied any connection",
+    "verdictYear": "2025",
+    "retired": "Still serving (transferred to Allahabad HC)",
+    "postRetirement": "Internal committee recommended impeachment — pending with government",
+    "postYear": "2025–ongoing",
+    "gap": "Impeachment pending",
+    "source": "https://frontline.thehindu.com/columns/yashwant-varma-cash-scandal-india-law/article69730959.ece"
+  },
+  {
+    "name": "V. Ramaswami — Political Protection of a Judge",
+    "verdict": "Faced 14 charges of financial irregularities and extravagant spending as Chief Justice of Punjab & Haryana HC; inquiry committee found him guilty of misconduct",
+    "verdictYear": "1991–1993",
+    "retired": "Impeachment reached Lok Sabha",
+    "postRetirement": "Ruling Congress party abstained from voting — motion failed despite majority support among attending MPs",
+    "postYear": "1993",
+    "gap": "Saved by political abstention",
+    "source": "https://thewire.in/law/justice-v-ramaswami-impeachment-lok-sabha-kapil-sibal-supreme-court"
+  },
+  {
+    "name": "Soumitra Sen — Resigned to Dodge Impeachment",
+    "verdict": "Found guilty by Rajya Sabha of misappropriating public money he handled as a court-appointed receiver before becoming a judge",
+    "verdictYear": "2011",
+    "retired": "Resigned before Lok Sabha could vote",
+    "postRetirement": "First judge impeached by Rajya Sabha — but resigned just in time to avoid formal removal. No prosecution followed.",
+    "postYear": "2011",
+    "gap": "Escaped via resignation",
+    "source": "https://www.bbc.com/news/world-south-asia-14759905"
   }
 ]

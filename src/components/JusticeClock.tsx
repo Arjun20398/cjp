@@ -48,7 +48,7 @@ export default function JusticeClock() {
           </p>
 
           <div
-            className={`overflow-hidden transition-all duration-300 ${hovered ? "max-h-60 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"}`}
+            className={`overflow-hidden transition-all duration-300 ${hovered ? "max-h-80 opacity-100 mt-3" : "max-h-0 opacity-0 mt-0"}`}
           >
             <div className="border-t border-border pt-3 space-y-2.5">
               <div className="flex items-center justify-between text-[10px]">
@@ -64,6 +64,18 @@ export default function JusticeClock() {
                 </span>
               </div>
               <div className="flex items-center justify-between text-[10px]">
+                <span className="text-muted">Complaints vs judges (10yr)</span>
+                <span className="font-mono font-bold text-accent">
+                  8,600+
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-[10px]">
+                <span className="text-muted">Peak year (2024)</span>
+                <span className="font-mono font-bold text-accent">
+                  1,170
+                </span>
+              </div>
+              <div className="flex items-center justify-between text-[10px]">
                 <span className="text-muted">Avg wait for justice</span>
                 <span className="font-mono font-bold text-gold">
                   ~27 years
@@ -76,7 +88,7 @@ export default function JusticeClock() {
                 </span>
               </div>
               <p className="text-[8px] text-muted/60 italic pt-1 border-t border-border">
-                Source: NJDG & Dept. of Justice (satirical estimates)
+                Source: Lok Sabha (Feb 2026), NJDG, Dept. of Justice
               </p>
             </div>
           </div>

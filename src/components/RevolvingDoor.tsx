@@ -11,10 +11,11 @@ type TimelineEntry = {
   postRetirement: string;
   postYear: string;
   gap: string;
+  source?: string;
 };
 
 const timeline: TimelineEntry[] = timelineData;
-const CARD_W = 420;
+const CARD_W = 480;
 const GAP = 16;
 const AUTO_SPEED = 0.5;
 const PAUSE_MS = 5000;
@@ -67,6 +68,17 @@ function Card({ entry, active }: { entry: TimelineEntry; active: boolean }) {
           </span>
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
         </div>
+
+        {entry.source && (
+          <a
+            href={entry.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block mt-3 text-xs font-semibold text-gold/80 hover:text-gold transition-colors truncate"
+          >
+            📰 Source →
+          </a>
+        )}
       </div>
     </div>
   );
@@ -125,7 +137,7 @@ export default function RevolvingDoor() {
           questions nobody is allowed to ask.
         </p>
         <p className="text-muted text-xs italic">
-          All names anonymised. All patterns real.
+          Real names. Real cases. Real pattern.
         </p>
       </div>
 
@@ -161,14 +173,28 @@ export default function RevolvingDoor() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 mt-8">
-        <div className="border border-accent/30 rounded-lg p-5 bg-accent/5 text-center">
-          <p className="font-serif text-accent text-sm font-bold mb-1">
-            See the pattern?
+        <div className="border border-accent/30 rounded-lg p-5 bg-accent/5">
+          <p className="font-serif text-accent text-sm font-bold mb-2 text-center">
+            The Systemic Pattern
           </p>
-          <p className="text-muted text-xs">
-            Favorable verdict → Retirement → Government appointment.
-            Coincidence requires imagination. Patterns require investigation.
+          <p className="text-muted text-xs leading-relaxed text-center mb-3">
+            Judges may consciously or unconsciously favor governments while in office, expecting future appointments.
+            Rajya Sabha seats, Governor posts, tribunal chairs, party memberships — all within months of retirement.
+            No cooling-off period exists in India. The revolving door spins freely.
           </p>
+          <div className="flex items-center justify-center gap-4 text-[10px]">
+            <span className="font-mono font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">
+              ⏱ Gap: 0 to 4 months (typical)
+            </span>
+            <a
+              href="https://www.bbc.com/news/articles/c627l7zexr8o"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold/60 hover:text-gold transition-colors"
+            >
+              📰 BBC Source →
+            </a>
+          </div>
         </div>
       </div>
     </section>
