@@ -5,7 +5,7 @@ export const siteConfig = {
     "A satirical website exposing the rot in India's judiciary through humor, facts, and fearless commentary.",
   url: "https://cheapjusticeofindia.com",
   disclaimer:
-    "This is a satirical publication. All factual claims are sourced from publicly available records. Views expressed are opinions protected under Article 19(1)(a) of the Indian Constitution.",
+    "All facts published on this website are sourced from publicly available records, court documents, parliamentary data, and credible news reports. The satirical tone is our editorial voice — the facts are real. Views expressed are opinions protected under Article 19(1)(a) of the Indian Constitution.",
 };
 
 export type SectionConfig = {

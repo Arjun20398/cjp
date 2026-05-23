@@ -9,7 +9,7 @@ const navLinks = [
   { href: "#excuse-generator", label: "Excuse Generator" },
   { href: "#revolving-door", label: "Revolving Door" },
   { href: "#fiqs", label: "FIQs" },
-  { href: "#wall", label: "Testimonies" },
+  { href: "#wall", label: "Wall of Shame" },
 ];
 
 export default function Header() {

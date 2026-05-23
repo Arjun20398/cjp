@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <SplashScreen />
 
-      <section className="border-b border-border">
+      <section className="border-b border-border" aria-label="Hero">
         <div className="max-w-5xl mx-auto px-4 py-24 md:py-32 text-center">
           <p className="font-serif text-gold text-xs uppercase tracking-[0.3em] mb-6">
             Supreme Court of Satire &bull; Est. 2026
@@ -31,8 +31,9 @@ export default function Home() {
             {" "}&mdash; they judge you, we judge them.
           </p>
           <p className="text-base text-muted max-w-xl mx-auto mb-10">
-            A satirical publication exposing corruption, loopholes, flawed
-            judgments, and conflicts of interest in India&apos;s judiciary.
+            Real facts about India&apos;s judiciary — corruption, loopholes,
+            flawed judgments, and conflicts of interest — delivered with
+            satirical honesty.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <a
@@ -63,6 +64,41 @@ export default function Home() {
       <RevolvingDoor />
       <FIQSection />
       <WallOfShame />
+
+      <section id="sources" className="border-b border-border py-16" aria-label="Sources and references">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
+            Verification
+          </p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Our Sources
+          </h2>
+          <p className="text-muted text-sm mb-8">
+            Every fact on this site is sourced. The tone is satirical — the data is not.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { name: "NDTV", url: "https://www.ndtv.com", desc: "Complaint statistics, judiciary corruption data" },
+              { name: "BBC News", url: "https://www.bbc.com", desc: "Revolving door pattern, systemic analysis" },
+              { name: "The Wire", url: "https://thewire.in", desc: "Ramaswami impeachment, judicial accountability" },
+              { name: "ThePrint", url: "https://theprint.in", desc: "Gogoi RS tenure, Rohit Arya profile" },
+              { name: "Frontline", url: "https://frontline.thehindu.com", desc: "Gangopadhyay case, Varma cash scandal" },
+              { name: "Lok Sabha Records", url: "https://sansad.in", desc: "Parliamentary data on judicial complaints" },
+            ].map((src) => (
+              <a
+                key={src.name}
+                href={src.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-card-bg border border-border rounded-lg p-4 hover:border-gold/50 transition-colors"
+              >
+                <p className="text-sm font-semibold text-gold mb-1">{src.name}</p>
+                <p className="text-[11px] text-muted leading-relaxed">{src.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-card-bg">
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">

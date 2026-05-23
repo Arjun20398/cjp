@@ -10,9 +10,21 @@ type Statement = {
 
 const statements: Statement[] = storiesData;
 
+function shareText(s: Statement) {
+  return `"${s.quote}" — ${s.author}, ${s.court} (${s.year})\n\nSource: cheapjusticeofindia.com`;
+}
+
+function twitterUrl(s: Statement) {
+  return `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText(s))}`;
+}
+
+function whatsappUrl(s: Statement) {
+  return `https://wa.me/?text=${encodeURIComponent(shareText(s))}`;
+}
+
 export default function WallOfShame() {
   return (
-    <section id="wall" className="border-b border-border py-16">
+    <section id="wall" className="border-b border-border py-16" aria-label="Wall of Shame — Controversial judicial statements">
       <div className="max-w-4xl mx-auto px-4">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           From the Bench
@@ -26,7 +38,7 @@ export default function WallOfShame() {
 
         <div className="grid gap-6">
           {statements.map((s, i) => (
-            <div
+            <article
               key={i}
               className="bg-card-bg border border-border rounded-lg p-6 relative overflow-hidden"
             >
@@ -39,18 +51,38 @@ export default function WallOfShame() {
                   {s.year}
                 </span>
               </div>
-              <p className="font-serif text-foreground text-lg leading-relaxed italic mb-4">
+              <blockquote className="font-serif text-foreground text-lg leading-relaxed italic mb-4">
                 &ldquo;{s.quote}&rdquo;
-              </p>
+              </blockquote>
               <p className="text-xs text-gold font-semibold mb-3">
                 — {s.author}
               </p>
-              <div className="border-t border-border pt-3">
-                <p className="text-xs text-muted leading-relaxed">
+              <div className="border-t border-border pt-3 flex items-start justify-between gap-4">
+                <p className="text-xs text-muted leading-relaxed flex-1">
                   {s.context}
                 </p>
+                <div className="flex gap-2 shrink-0">
+                  <a
+                    href={twitterUrl(s)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] px-2.5 py-1 rounded border border-border text-muted hover:text-gold hover:border-gold transition-colors"
+                    aria-label={`Share quote by ${s.author} on Twitter`}
+                  >
+                    𝕏 Share
+                  </a>
+                  <a
+                    href={whatsappUrl(s)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] px-2.5 py-1 rounded border border-border text-muted hover:text-[#25d366] hover:border-[#25d366] transition-colors"
+                    aria-label={`Share quote by ${s.author} on WhatsApp`}
+                  >
+                    WhatsApp
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
