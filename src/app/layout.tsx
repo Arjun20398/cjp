@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -32,6 +33,17 @@ export const metadata: Metadata = {
     "revolving door judiciary",
     "cheap justice",
   ],
+  icons: {
+    icon: "/favicon.svg",
+  },
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
+  other: {
+    "theme-color": "#0c0f1a",
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +54,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
+        <Script
+          defer
+          data-domain="cheapjusticeofindia.com"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

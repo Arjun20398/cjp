@@ -61,7 +61,7 @@ function ServiceCard({
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="border-b border-border py-16">
+    <section id="services" className="border-b border-border py-16" aria-label="Our Services — What the judiciary offers">
       <div className="max-w-6xl mx-auto px-4">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           What We Offer

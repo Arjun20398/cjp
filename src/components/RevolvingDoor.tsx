@@ -124,7 +124,7 @@ export default function RevolvingDoor() {
   const items = [...timeline, ...timeline];
 
   return (
-    <section id="revolving-door" className="border-b border-border py-16 overflow-hidden">
+    <section id="revolving-door" className="border-b border-border py-16 overflow-hidden" aria-label="The Revolving Door — Judges moving to politics">
       <div className="max-w-4xl mx-auto px-4 mb-8">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           Follow the Career Path

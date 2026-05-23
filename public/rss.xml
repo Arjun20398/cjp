@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheap Justice of India</title>
+    <link>https://cheapjusticeofindia.com</link>
+    <description>Real facts about India's judiciary — delivered with satirical honesty.</description>
+    <language>en-in</language>
+    <atom:link href="https://cheapjusticeofindia.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>The Revolving Door of Justice: From Bench to Political Bench</title>
+      <link>https://cheapjusticeofindia.com/articles/the-revolving-door-of-justice</link>
+      <description>A look at how retired judges seamlessly transition into political roles, raising serious questions about their impartiality while they were on the bench.</description>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 GMT</pubDate>
+      <guid>https://cheapjusticeofindia.com/articles/the-revolving-door-of-justice</guid>
+    </item>
+    <item>
+      <title>Sealed Cover Jurisprudence: Justice in the Dark</title>
+      <link>https://cheapjusticeofindia.com/articles/sealed-cover-jurisprudence</link>
+      <description>How the practice of sealed cover submissions has become a tool to keep the public in the dark about matters that directly affect them.</description>
+      <pubDate>Tue, 10 Dec 2024 00:00:00 GMT</pubDate>
+      <guid>https://cheapjusticeofindia.com/articles/sealed-cover-jurisprudence</guid>
+    </item>
+  </channel>
+</rss>

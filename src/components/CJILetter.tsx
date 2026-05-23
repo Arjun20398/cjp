@@ -24,7 +24,7 @@ export default function CJILetter() {
   }, []);
 
   return (
-    <section id="cji-letter" className="border-b border-border py-16">
+    <section id="cji-letter" className="border-b border-border py-16" aria-label="Letter from the Chief Justice">
       <div className="max-w-3xl mx-auto px-4">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           Official Correspondence

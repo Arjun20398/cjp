@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navLinks = [
@@ -14,6 +14,22 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [light, setLight] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme");
+    if (stored === "light") {
+      setLight(true);
+      document.documentElement.classList.add("light");
+    }
+  }, []);
+
+  function toggleTheme() {
+    const next = !light;
+    setLight(next);
+    document.documentElement.classList.toggle("light", next);
+    localStorage.setItem("theme", next ? "light" : "dark");
+  }
 
   return (
     <header className="border-b border-border bg-background/90 backdrop-blur-md sticky top-0 z-50">
@@ -40,11 +56,20 @@ export default function Header() {
             ))}
           </nav>
 
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden text-muted hover:text-gold"
-            aria-label="Toggle menu"
-          >
+          <div className="flex items-center gap-3">
+            <button
+              onClick={toggleTheme}
+              className="text-muted hover:text-gold transition-colors text-lg"
+              aria-label={light ? "Switch to dark mode" : "Switch to light mode"}
+            >
+              {light ? "🌙" : "☀️"}
+            </button>
+
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="lg:hidden text-muted hover:text-gold"
+              aria-label="Toggle menu"
+            >
             <svg
               className="w-5 h-5"
               fill="none"
@@ -68,6 +93,7 @@ export default function Header() {
               )}
             </svg>
           </button>
+          </div>
         </div>
 
         {menuOpen && (

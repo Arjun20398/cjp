@@ -8,6 +8,7 @@ import FIQSection from "@/components/FIQSection";
 import WallOfShame from "@/components/WallOfShame";
 import ContemptNotice from "@/components/ContemptNotice";
 import FloatingGavel from "@/components/FloatingGavel";
+import FadeIn from "@/components/FadeIn";
 
 export default function Home() {
   return (
@@ -16,54 +17,56 @@ export default function Home() {
 
       <section className="border-b border-border" aria-label="Hero">
         <div className="max-w-5xl mx-auto px-4 py-24 md:py-32 text-center">
-          <p className="font-serif text-gold text-xs uppercase tracking-[0.3em] mb-6">
-            Supreme Court of Satire &bull; Est. 2026
-          </p>
-          <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
-            Your case has been{" "}
-            <span className="text-muted line-through decoration-2">
-              resolved
-            </span>{" "}
-            <span className="text-accent">adjourned.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-4">
-            <span className="text-gold font-bold">Cheap Justice of India</span>
-            {" "}&mdash; they judge you, we judge them.
-          </p>
-          <p className="text-base text-muted max-w-xl mx-auto mb-10">
-            Real facts about India&apos;s judiciary — corruption, loopholes,
-            flawed judgments, and conflicts of interest — delivered with
-            satirical honesty.
-          </p>
-          <div className="flex flex-wrap justify-center gap-3">
-            <a
-              href="#services"
-              className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg hover:border-gold hover:text-gold transition-colors"
-            >
-              Our Services
-            </a>
-            <a
-              href="#excuse-generator"
-              className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg hover:border-gold hover:text-gold transition-colors"
-            >
-              Generate an Excuse
-            </a>
-            <a
-              href="#revolving-door"
-              className="px-5 py-2.5 text-sm font-medium bg-gold text-background rounded-lg hover:bg-gold/90 transition-colors"
-            >
-              The Revolving Door
-            </a>
-          </div>
+          <FadeIn>
+            <p className="font-serif text-gold text-xs uppercase tracking-[0.3em] mb-6">
+              Supreme Court of Satire &bull; Est. 2026
+            </p>
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+              Your case has been{" "}
+              <span className="text-muted line-through decoration-2">
+                resolved
+              </span>{" "}
+              <span className="text-accent">adjourned.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-4">
+              <span className="text-gold font-bold">Cheap Justice of India</span>
+              {" "}&mdash; they judge you, we judge them.
+            </p>
+            <p className="text-base text-muted max-w-xl mx-auto mb-10">
+              Real facts about India&apos;s judiciary — corruption, loopholes,
+              flawed judgments, and conflicts of interest — delivered with
+              satirical honesty.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a
+                href="#services"
+                className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg hover:border-gold hover:text-gold transition-colors"
+              >
+                Our Services
+              </a>
+              <a
+                href="#excuse-generator"
+                className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg hover:border-gold hover:text-gold transition-colors"
+              >
+                Generate an Excuse
+              </a>
+              <a
+                href="#revolving-door"
+                className="px-5 py-2.5 text-sm font-medium bg-gold text-background rounded-lg hover:bg-gold/90 transition-colors"
+              >
+                The Revolving Door
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      <ServicesSection />
-      <CJILetter />
-      <ExcuseGenerator />
-      <RevolvingDoor />
-      <FIQSection />
-      <WallOfShame />
+      <FadeIn><ServicesSection /></FadeIn>
+      <FadeIn><CJILetter /></FadeIn>
+      <FadeIn><ExcuseGenerator /></FadeIn>
+      <FadeIn><RevolvingDoor /></FadeIn>
+      <FadeIn><FIQSection /></FadeIn>
+      <FadeIn><WallOfShame /></FadeIn>
 
       <section id="sources" className="border-b border-border py-16" aria-label="Sources and references">
         <div className="max-w-4xl mx-auto px-4">

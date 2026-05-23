@@ -73,7 +73,7 @@ export default function FIQSection() {
   const items = [...fiqs, ...fiqs];
 
   return (
-    <section id="fiqs" className="border-b border-border py-16 overflow-hidden">
+    <section id="fiqs" className="border-b border-border py-16 overflow-hidden" aria-label="Frequently Ignored Questions">
       <div className="max-w-4xl mx-auto px-4 mb-8">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           Court Order No. CJI/FAQ/2026

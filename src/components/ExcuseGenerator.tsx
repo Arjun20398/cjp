@@ -36,7 +36,7 @@ export default function ExcuseGenerator() {
   }
 
   return (
-    <section id="excuse-generator" className="border-b border-border py-16">
+    <section id="excuse-generator" className="border-b border-border py-16" aria-label="Judicial Excuse Generator">
       <div className="max-w-2xl mx-auto px-4 text-center">
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           Interactive
