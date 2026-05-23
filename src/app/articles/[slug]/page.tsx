@@ -15,9 +15,20 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const article = getArticleContent(slug);
   if (!article) return { title: "Not Found" };
+  const url = `https://cheapjusticeofindia.com/articles/${slug}`;
   return {
     title: `${article.meta.title} — Cheap Justice of India`,
     description: article.meta.description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.meta.title,
+      description: article.meta.description,
+      url,
+      type: "article",
+      publishedTime: article.meta.date,
+      authors: [article.meta.author],
+      tags: article.meta.tags,
+    },
   };
 }
 
@@ -26,8 +37,28 @@ export default async function ArticlePage({ params }: Props) {
   const article = getArticleContent(slug);
   if (!article) notFound();
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.meta.title,
+    description: article.meta.description,
+    datePublished: article.meta.date,
+    author: { "@type": "Person", name: article.meta.author },
+    publisher: {
+      "@type": "Organization",
+      name: "Cheap Justice of India",
+      url: "https://cheapjusticeofindia.com",
+    },
+    mainEntityOfPage: `https://cheapjusticeofindia.com/articles/${slug}`,
+    keywords: article.meta.tags,
+  };
+
   return (
     <article className="max-w-3xl mx-auto px-4 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="mb-8">
         <div className="flex items-center gap-3 text-xs text-muted mb-4">
           <span className="uppercase font-semibold text-accent">

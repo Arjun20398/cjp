@@ -10,9 +10,40 @@ import ContemptNotice from "@/components/ContemptNotice";
 import FloatingGavel from "@/components/FloatingGavel";
 import FadeIn from "@/components/FadeIn";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: "Cheap Justice of India",
+      url: "https://cheapjusticeofindia.com",
+      description:
+        "Real facts about judicial corruption in India — 4.9 crore pending cases, 8,600+ complaints, judges moving to politics.",
+      inLanguage: "en-IN",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://cheapjusticeofindia.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@type": "Organization",
+      name: "Cheap Justice of India",
+      url: "https://cheapjusticeofindia.com",
+      logo: "https://cheapjusticeofindia.com/favicon.svg",
+      description:
+        "A satirical publication exposing corruption, loopholes, and conflicts of interest in India's judiciary using real, sourced facts.",
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <SplashScreen />
 
       <section className="border-b border-border" aria-label="Hero">
@@ -102,6 +133,52 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FadeIn>
+        <section id="articles" className="border-b border-border py-16" aria-label="Articles and deep dives">
+          <div className="max-w-4xl mx-auto px-4">
+            <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
+              Deep Dives
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-2">
+              Read the Full Story
+            </h2>
+            <p className="text-muted text-sm mb-8">
+              Long-form investigations into the judiciary&apos;s darkest corners
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <a
+                href="/articles/the-revolving-door-of-justice"
+                className="block bg-card-bg border border-border rounded-lg p-5 hover:border-gold/50 transition-colors"
+              >
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase">
+                  Revolving Door
+                </span>
+                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2">
+                  From Bench to Political Bench
+                </h3>
+                <p className="text-xs text-muted leading-relaxed">
+                  How retired judges seamlessly transition into political roles, raising questions about their impartiality while on the bench.
+                </p>
+              </a>
+              <a
+                href="/articles/sealed-cover-jurisprudence"
+                className="block bg-card-bg border border-border rounded-lg p-5 hover:border-gold/50 transition-colors"
+              >
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase">
+                  Loopholes
+                </span>
+                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2">
+                  Justice in the Dark
+                </h3>
+                <p className="text-xs text-muted leading-relaxed">
+                  How sealed cover submissions became a tool to keep the public in the dark about matters that directly affect them.
+                </p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </FadeIn>
 
       <section className="bg-card-bg">
         <div className="max-w-4xl mx-auto px-4 py-16 text-center">

@@ -7,12 +7,28 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Cheap Justice of India — They judge you. We judge them.",
   description:
-    "A satirical website exposing the rot in India's judiciary through humor, facts, and fearless commentary.",
+    "Real facts about judicial corruption in India — 4.9 crore pending cases, 8,600+ complaints in 10 years, judges moving to politics. Exposed with satirical honesty.",
   metadataBase: new URL("https://cheapjusticeofindia.com"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
+  },
+  alternates: {
+    canonical: "https://cheapjusticeofindia.com",
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
   openGraph: {
-    title: "Cheap Justice of India",
+    title: "Cheap Justice of India — They judge you. We judge them.",
     description:
-      "They judge you. We judge them. Real facts about India's judiciary — delivered with satirical honesty.",
+      "4.9 crore pending cases. 8,600+ complaints. Judges turning politicians. Real facts, satirical tone.",
     url: "https://cheapjusticeofindia.com",
     siteName: "Cheap Justice of India",
     type: "website",
@@ -22,24 +38,26 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cheap Justice of India",
     description:
-      "They judge you. We judge them. Real facts about India's judiciary — delivered with satirical honesty.",
+      "4.9 crore pending cases. 8,600+ complaints. Judges turning politicians. Real facts, satirical tone.",
   },
   keywords: [
-    "Indian judiciary",
-    "judicial corruption",
-    "Supreme Court India",
-    "satire",
-    "judicial accountability",
+    "Indian judiciary corruption",
+    "judicial corruption India",
+    "Supreme Court India corruption",
+    "pending cases India",
+    "judiciary satire India",
+    "judicial accountability India",
     "revolving door judiciary",
-    "cheap justice",
+    "cheap justice India",
+    "judges corruption India",
+    "collegium system India",
+    "judicial complaints India",
+    "Indian courts backlog",
+    "CJI corruption",
+    "judge impeachment India",
   ],
   icons: {
     icon: "/favicon.svg",
-  },
-  alternates: {
-    types: {
-      "application/rss+xml": "/rss.xml",
-    },
   },
   other: {
     "theme-color": "#0c0f1a",
@@ -52,7 +70,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased light">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.remove("light")}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Script
           defer

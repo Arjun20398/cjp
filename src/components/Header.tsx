@@ -14,12 +14,14 @@ const navLinks = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [light, setLight] = useState(false);
+  const [light, setLight] = useState(true);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
-    if (stored === "light") {
-      setLight(true);
+    if (stored === "dark") {
+      setLight(false);
+      document.documentElement.classList.remove("light");
+    } else {
       document.documentElement.classList.add("light");
     }
   }, []);
@@ -59,10 +61,20 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="text-muted hover:text-gold transition-colors text-lg"
+              className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-border hover:border-gold/50 transition-colors"
               aria-label={light ? "Switch to dark mode" : "Switch to light mode"}
             >
-              {light ? "🌙" : "☀️"}
+              <span className="text-xs text-muted">{light ? "Light" : "Dark"}</span>
+              <span
+                className="relative w-8 h-4 rounded-full bg-border transition-colors"
+              >
+                <span
+                  className={`absolute top-0.5 w-3 h-3 rounded-full bg-gold transition-all ${
+                    light ? "left-0.5" : "left-[18px]"
+                  }`}
+                />
+              </span>
+              <span className="text-sm">{light ? "☀️" : "🌙"}</span>
             </button>
 
             <button
