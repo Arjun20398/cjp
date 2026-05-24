@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Typewriter from "@/components/Typewriter";
+import Highlight from "@/components/Highlight";
 
 export default function CJILetter() {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,7 +31,7 @@ export default function CJILetter() {
         <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-3">
           Official Correspondence
         </p>
-        <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-10">
+        <h2 className="font-serif text-3xl md:text-4xl font-bold text-gold mb-10">
           A Letter From The Hon&apos;ble Cheap Justice
         </h2>
 
@@ -44,7 +46,7 @@ export default function CJILetter() {
           <p className="font-serif text-foreground/80 leading-relaxed mb-4">
             We hear you. We hear every single one of your 5 crore pending cases.
             In fact, we hear them so well that we&apos;ve decided to take our
-            time responding — sometimes 20, 30, even 40 years. Good things come
+            time responding — <Highlight>sometimes 20, 30, even 40 years</Highlight>. Good things come
             to those who wait, and justice is the best thing of all.
           </p>
 
@@ -53,27 +55,27 @@ export default function CJILetter() {
             parties after retirement. Let me assure you — this is simply judges
             exercising their fundamental right to pursue their passions. The fact
             that their passion happens to align with the party whose cases they
-            ruled on is purely coincidental.
+            ruled on is <Highlight delay={200}>purely coincidental</Highlight>.
           </p>
 
           <p className="font-serif text-foreground/80 leading-relaxed mb-4">
             As for the collegium system — we believe in transparency. That is
             why we transparently decide amongst ourselves, behind closed doors,
-            who gets to be a judge. Democracy works best when the people who
-            make the decisions also decide who makes the decisions.
+            who gets to be a judge. <Highlight delay={400}>Democracy works best when the people who
+            make the decisions also decide who makes the decisions.</Highlight>
           </p>
 
           <p className="font-serif text-foreground/80 leading-relaxed mb-4">
             Regarding sealed covers — some evidence is simply too important for
             the accused to see. We understand this may seem unfair, but rest
             assured, we have read it, and we think it&apos;s very convincing. You
-            should trust us. After all, would a judge lie?
+            should trust us. <Highlight delay={200}>After all, would a judge lie?</Highlight>
           </p>
 
           <p className="font-serif text-foreground/80 leading-relaxed mb-6">
             In closing, I want to remind you that criticising the judiciary is
             contempt of court. So please keep your opinions to yourself, or
-            we&apos;ll see you in court. Eventually. In about 15 years.
+            we&apos;ll see you in court. <Highlight delay={300}>Eventually. In about 15 years.</Highlight>
           </p>
 
           <div className="border-t border-border pt-6">
@@ -81,7 +83,7 @@ export default function CJILetter() {
               With judicial warmth,
             </p>
             <p className="font-serif text-gold font-bold text-lg mt-1">
-              The Hon&apos;ble Cheap Justice of India
+              <Typewriter text="The Hon'ble Cheap Justice of India" speed={50} cursor={false} />
             </p>
             <p className="text-xs text-muted mt-2 italic">
               (This letter was auto-generated. Much like some of our judgments.)

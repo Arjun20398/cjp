@@ -17,15 +17,17 @@ const PAUSE_MS = 5000;
 function FIQCard({ fiq, index, active }: { fiq: FIQ; index: number; active: boolean }) {
   return (
     <div
-      className={`shrink-0 border rounded-lg bg-card-bg p-6 flex flex-col transition-all duration-300 ${active ? "border-gold/60 scale-[1.02]" : "border-border"}`}
+      className={`group shrink-0 border rounded-xl bg-card-bg p-6 flex flex-col transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-[0_20px_50px_-15px_rgba(197,164,78,0.3)] hover:border-gold/50
+        ${active ? "border-gold/60 scale-[1.02]" : "border-border"}`}
       style={{ width: CARD_W }}
     >
-      <span className="font-mono text-[10px] text-gold mb-3">§{index + 1}</span>
-      <p className="font-serif text-foreground font-semibold text-base mb-4 leading-snug">
+      <span className="font-mono text-[10px] text-gold mb-3 transition-all duration-300 group-hover:scale-125 group-hover:text-accent inline-block origin-left">§{index + 1}</span>
+      <p className="font-serif text-foreground font-semibold text-base mb-4 leading-snug transition-colors duration-300 group-hover:text-gold">
         {fiq.question}
       </p>
-      <div className="border-l-2 border-gold/30 pl-4 flex-1">
-        <p className="text-sm text-foreground/75 font-serif leading-relaxed italic">
+      <div className="border-l-2 border-gold/30 pl-4 flex-1 transition-colors duration-300 group-hover:border-gold">
+        <p className="text-sm text-foreground/75 font-serif leading-relaxed italic transition-colors duration-300 group-hover:text-foreground/90">
           {fiq.answer}
         </p>
       </div>
@@ -95,7 +97,7 @@ export default function FIQSection() {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 px-4 overflow-x-hidden"
+          className="flex gap-4 px-4 py-4 overflow-x-hidden"
           onMouseEnter={() => { pausedUntil.current = Date.now() + 999999999; }}
           onMouseLeave={() => { pausedUntil.current = Date.now() + 1000; }}
         >

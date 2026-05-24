@@ -23,11 +23,13 @@ const PAUSE_MS = 5000;
 function Card({ entry, active }: { entry: TimelineEntry; active: boolean }) {
   return (
     <div
-      className={`shrink-0 rounded-xl overflow-hidden transition-all duration-300 ${active ? "scale-[1.03] shadow-lg shadow-gold/10" : "shadow-md shadow-black/20"}`}
-      style={{ width: CARD_W }}
+      className={`group shrink-0 rounded-xl overflow-hidden flex flex-col border transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:shadow-[0_20px_50px_-15px_rgba(197,164,78,0.3)] hover:border-gold/50
+        ${active ? "scale-[1.03] shadow-lg shadow-gold/10 border-gold/30" : "shadow-md shadow-black/20 border-transparent"}`}
+      style={{ width: CARD_W, height: 380 }}
     >
-      <div className="bg-gradient-to-r from-gold/20 via-gold/10 to-transparent px-5 py-4 border-b border-gold/20">
-        <p className="font-serif text-foreground font-bold text-lg leading-tight">
+      <div className="bg-gradient-to-r from-gold/20 via-gold/10 to-transparent px-5 py-3 border-b border-gold/20 h-[68px] flex flex-col justify-center shrink-0">
+        <p className="font-serif text-foreground font-bold text-base leading-tight line-clamp-2 transition-colors duration-300 group-hover:text-gold">
           {entry.name}
         </p>
         <p className="text-[10px] text-gold/70 uppercase tracking-widest mt-1">
@@ -35,7 +37,7 @@ function Card({ entry, active }: { entry: TimelineEntry; active: boolean }) {
         </p>
       </div>
 
-      <div className="bg-card-bg px-5 py-4">
+      <div className="bg-card-bg px-5 py-4 flex flex-col flex-1 overflow-hidden">
         <div className="relative flex items-stretch gap-0 text-xs mb-4">
           <div className="flex-1 rounded-l-lg border border-border border-r-0 p-3 bg-card-bg-alt">
             <p className="text-gold uppercase tracking-wider text-[10px] font-semibold mb-1.5">
@@ -63,7 +65,7 @@ function Card({ entry, active }: { entry: TimelineEntry; active: boolean }) {
 
         <div className="flex items-center justify-between">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
-          <span className="mx-3 text-[11px] font-mono font-bold text-accent bg-accent/10 px-3 py-1 rounded-full">
+          <span className="mx-3 text-[11px] font-mono font-bold text-accent bg-accent/10 px-3 py-1 rounded-full transition-all duration-300 group-hover:scale-110 group-hover:bg-accent/20">
             ⏱ {entry.gap}
           </span>
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -74,7 +76,7 @@ function Card({ entry, active }: { entry: TimelineEntry; active: boolean }) {
             href={entry.source}
             target="_blank"
             rel="noopener noreferrer"
-            className="block mt-3 text-xs font-semibold text-gold/80 hover:text-gold transition-colors truncate"
+            className="block mt-3 text-xs font-semibold text-gold/80 hover:text-gold transition-all duration-300 truncate group-hover:translate-x-1"
           >
             📰 Source →
           </a>
@@ -147,7 +149,7 @@ export default function RevolvingDoor() {
 
         <div
           ref={scrollRef}
-          className="flex gap-4 px-4 overflow-x-hidden"
+          className="flex gap-4 px-4 py-4 overflow-x-hidden"
           onMouseEnter={() => { pausedUntil.current = Date.now() + 999999999; }}
           onMouseLeave={() => { pausedUntil.current = Date.now() + 1000; }}
         >

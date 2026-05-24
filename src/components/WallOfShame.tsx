@@ -40,9 +40,10 @@ export default function WallOfShame() {
           {statements.map((s, i) => (
             <article
               key={i}
-              className="bg-card-bg border border-border rounded-lg p-6 relative overflow-hidden"
+              className="group bg-card-bg border border-border rounded-xl p-6 relative overflow-hidden transition-all duration-300 ease-out
+                hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-[0_16px_40px_-12px_rgba(197,164,78,0.25)]"
             >
-              <div className="absolute top-0 left-0 w-1 h-full bg-accent" />
+              <div className="absolute top-0 left-0 w-1 h-full bg-accent transition-all duration-300 group-hover:w-1.5 group-hover:bg-gold" />
               <div className="flex items-center gap-3 mb-4 flex-wrap">
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase">
                   {s.court}
@@ -51,10 +52,10 @@ export default function WallOfShame() {
                   {s.year}
                 </span>
               </div>
-              <blockquote className="font-serif text-foreground text-lg leading-relaxed italic mb-4">
+              <blockquote className="font-serif text-foreground text-lg leading-relaxed italic mb-4 transition-colors duration-300 group-hover:text-gold">
                 &ldquo;{s.quote}&rdquo;
               </blockquote>
-              <p className="text-xs text-gold font-semibold mb-3">
+              <p className="text-xs text-gold font-semibold mb-3 transition-all duration-300 group-hover:translate-x-1">
                 — {s.author}
               </p>
               <div className="border-t border-border pt-3 flex items-start justify-between gap-4">

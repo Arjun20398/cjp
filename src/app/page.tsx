@@ -9,6 +9,8 @@ import WallOfShame from "@/components/WallOfShame";
 import ContemptNotice from "@/components/ContemptNotice";
 import FloatingGavel from "@/components/FloatingGavel";
 import FadeIn from "@/components/FadeIn";
+import HeroTitle from "@/components/HeroTitle";
+import Typewriter from "@/components/Typewriter";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -52,13 +54,7 @@ export default function Home() {
             <p className="font-serif text-gold text-xs uppercase tracking-[0.3em] mb-6">
               Supreme Court of Satire &bull; Est. 2026
             </p>
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
-              Your case has been{" "}
-              <span className="text-muted line-through decoration-2">
-                resolved
-              </span>{" "}
-              <span className="text-accent">adjourned.</span>
-            </h1>
+            <HeroTitle />
             <p className="text-xl md:text-2xl text-muted max-w-2xl mx-auto mb-4">
               <span className="text-gold font-bold">Cheap Justice of India</span>
               {" "}&mdash; they judge you, we judge them.
@@ -124,10 +120,11 @@ export default function Home() {
                 href={src.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-card-bg border border-border rounded-lg p-4 hover:border-gold/50 transition-colors"
+                className="group block bg-card-bg border border-border rounded-xl p-4 transition-all duration-300 ease-out
+                  hover:-translate-y-1.5 hover:border-gold/50 hover:shadow-[0_16px_40px_-12px_rgba(197,164,78,0.25)]"
               >
-                <p className="text-sm font-semibold text-gold mb-1">{src.name}</p>
-                <p className="text-[11px] text-muted leading-relaxed">{src.desc}</p>
+                <p className="text-sm font-semibold text-gold mb-1 transition-all duration-300 group-hover:translate-x-0.5">{src.name}</p>
+                <p className="text-[11px] text-muted leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">{src.desc}</p>
               </a>
             ))}
           </div>
@@ -149,29 +146,31 @@ export default function Home() {
             <div className="grid gap-4 sm:grid-cols-2">
               <a
                 href="/articles/the-revolving-door-of-justice"
-                className="block bg-card-bg border border-border rounded-lg p-5 hover:border-gold/50 transition-colors"
+                className="group block bg-card-bg border border-border rounded-xl p-5 transition-all duration-300 ease-out
+                  hover:-translate-y-2 hover:border-gold/50 hover:shadow-[0_20px_50px_-15px_rgba(197,164,78,0.3)]"
               >
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase transition-all duration-300 group-hover:bg-accent group-hover:text-background">
                   Revolving Door
                 </span>
-                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2">
+                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2 transition-colors duration-300 group-hover:text-gold">
                   From Bench to Political Bench
                 </h3>
-                <p className="text-xs text-muted leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
                   How retired judges seamlessly transition into political roles, raising questions about their impartiality while on the bench.
                 </p>
               </a>
               <a
                 href="/articles/sealed-cover-jurisprudence"
-                className="block bg-card-bg border border-border rounded-lg p-5 hover:border-gold/50 transition-colors"
+                className="group block bg-card-bg border border-border rounded-xl p-5 transition-all duration-300 ease-out
+                  hover:-translate-y-2 hover:border-gold/50 hover:shadow-[0_20px_50px_-15px_rgba(197,164,78,0.3)]"
               >
-                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-accent/15 text-accent uppercase transition-all duration-300 group-hover:bg-accent group-hover:text-background">
                   Loopholes
                 </span>
-                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2">
+                <h3 className="font-serif text-lg font-bold text-foreground mt-3 mb-2 transition-colors duration-300 group-hover:text-gold">
                   Justice in the Dark
                 </h3>
-                <p className="text-xs text-muted leading-relaxed">
+                <p className="text-xs text-muted leading-relaxed transition-colors duration-300 group-hover:text-foreground/80">
                   How sealed cover submissions became a tool to keep the public in the dark about matters that directly affect them.
                 </p>
               </a>
@@ -185,13 +184,11 @@ export default function Home() {
           <p className="font-serif text-gold text-xs uppercase tracking-[0.25em] mb-6">
             Closing Argument
           </p>
-          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 leading-relaxed">
-            &ldquo;In a democracy, the judiciary is the last line of defense.
-            When that line is compromised, the people must become the
-            auditors.&rdquo;
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4 leading-relaxed min-h-[4rem] md:min-h-[6rem]">
+            &ldquo;<Typewriter text="In a democracy, the judiciary is the last line of defense. When that line is compromised, the people must become the auditors." speed={40} cursor={false} />&rdquo;
           </h2>
-          <p className="text-sm text-gold font-semibold uppercase tracking-wide">
-            — Cheap Justice of India
+          <p className="text-sm text-gold font-semibold uppercase tracking-wide text-right">
+            <Typewriter text="— Cheap Justice of India" speed={60} cursor={false} delay={5200} />
           </p>
         </div>
       </section>

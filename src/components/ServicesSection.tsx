@@ -41,18 +41,24 @@ function ServiceCard({
   return (
     <div
       ref={ref}
-      className={`border border-border rounded-lg p-6 bg-card-bg transition-all duration-500 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+      className={`group relative border border-border rounded-xl p-6 bg-card-bg cursor-default overflow-hidden
+        transition-all duration-300 ease-out
+        hover:-translate-y-3 hover:scale-[1.03] hover:border-gold/60
+        hover:shadow-[0_20px_50px_-15px_rgba(197,164,78,0.35)]
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
+      <div className="absolute top-0 left-0 w-full h-[3px] bg-gold scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+      <div className="absolute bottom-0 left-0 w-full h-[3px] bg-accent scale-x-0 origin-right transition-transform duration-500 group-hover:scale-x-100" />
       <div className="flex items-center justify-between mb-3">
-        <h3 className="font-serif text-lg font-bold text-foreground">
+        <h3 className="font-serif text-lg font-bold text-foreground transition-colors duration-300 group-hover:text-gold">
           {service.title}
         </h3>
-        <span className="text-[10px] px-2 py-1 rounded bg-gold/15 text-gold font-semibold uppercase tracking-wider">
+        <span className="text-[10px] px-2 py-1 rounded bg-gold/15 text-gold font-semibold uppercase tracking-wider transition-all duration-300 group-hover:bg-gold group-hover:text-background group-hover:scale-110 group-hover:-rotate-2">
           {service.tagline}
         </span>
       </div>
-      <p className="text-sm text-muted leading-relaxed">
+      <p className="text-sm text-muted leading-relaxed transition-colors duration-300 group-hover:text-foreground">
         {service.description}
       </p>
     </div>
