@@ -180,15 +180,41 @@ export default function ExcuseGenerator() {
         </button>
 
         {result && !spinning && (
-          <button
-            onClick={() => {
-              const text = `⚖️ Judicial Excuse of the Day:\n\nThe Judge: ${result.action}\nBecause: ${result.excuse}\nResult: ${result.outcome}\n\n— cheapjusticeofindia.com`;
-              navigator.clipboard.writeText(text);
-            }}
-            className="ml-3 px-6 py-3 border border-border text-muted text-sm rounded-lg hover:border-gold hover:text-gold transition-colors"
-          >
-            Copy & Share
-          </button>
+          <div className="mt-4 flex flex-wrap justify-center gap-2">
+            <button
+              onClick={() => {
+                const text = `⚖️ Judicial Excuse of the Day:\n\nThe Judge: ${result.action}\nBecause: ${result.excuse}\nResult: ${result.outcome}\n\n— cheapjusticeofindia.com`;
+                navigator.clipboard.writeText(text);
+              }}
+              className="px-4 py-2 border border-border text-muted text-xs rounded-lg hover:border-gold hover:text-gold transition-colors"
+            >
+              📋 Copy
+            </button>
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(`⚖️ Judicial Excuse of the Day:\n\nThe Judge: ${result.action}\nBecause: ${result.excuse}\nResult: ${result.outcome}\n\n— cheapjusticeofindia.com`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-border text-muted text-xs rounded-lg hover:border-[#25d366] hover:text-[#25d366] transition-colors"
+            >
+              WhatsApp
+            </a>
+            <a
+              href={`https://t.me/share/url?url=https://cheapjusticeofindia.com&text=${encodeURIComponent(`⚖️ Judicial Excuse of the Day:\n\nThe Judge: ${result.action}\nBecause: ${result.excuse}\nResult: ${result.outcome}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-border text-muted text-xs rounded-lg hover:border-[#0088cc] hover:text-[#0088cc] transition-colors"
+            >
+              Telegram
+            </a>
+            <a
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`⚖️ Judicial Excuse of the Day:\n\nThe Judge: ${result.action}\nBecause: ${result.excuse}\nResult: ${result.outcome}\n\n— cheapjusticeofindia.com`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-border text-muted text-xs rounded-lg hover:border-gold hover:text-gold transition-colors"
+            >
+              𝕏 Post
+            </a>
+          </div>
         )}
       </div>
     </section>

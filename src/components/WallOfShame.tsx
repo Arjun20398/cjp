@@ -1,4 +1,7 @@
+"use client";
+
 import storiesData from "../../content/data/testimonies.json";
+import QuoteCardGenerator from "./QuoteCardGenerator";
 
 type Statement = {
   quote: string;
@@ -20,6 +23,10 @@ function twitterUrl(s: Statement) {
 
 function whatsappUrl(s: Statement) {
   return `https://wa.me/?text=${encodeURIComponent(shareText(s))}`;
+}
+
+function telegramUrl(s: Statement) {
+  return `https://t.me/share/url?url=https://cheapjusticeofindia.com&text=${encodeURIComponent(shareText(s))}`;
 }
 
 export default function WallOfShame() {
@@ -81,6 +88,16 @@ export default function WallOfShame() {
                   >
                     WhatsApp
                   </a>
+                  <a
+                    href={telegramUrl(s)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[10px] px-2.5 py-1 rounded border border-border text-muted hover:text-[#0088cc] hover:border-[#0088cc] transition-colors"
+                    aria-label={`Share quote by ${s.author} on Telegram`}
+                  >
+                    Telegram
+                  </a>
+                  <QuoteCardGenerator quote={s.quote} author={s.author} court={s.court} year={s.year} />
                 </div>
               </div>
             </article>

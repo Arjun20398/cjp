@@ -11,6 +11,8 @@ import FloatingGavel from "@/components/FloatingGavel";
 import FadeIn from "@/components/FadeIn";
 import HeroTitle from "@/components/HeroTitle";
 import Typewriter from "@/components/Typewriter";
+import SealedCoverGame from "@/components/SealedCoverGame";
+import WordOfTheDay from "@/components/WordOfTheDay";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -78,6 +80,12 @@ export default function Home() {
                 Generate an Excuse
               </a>
               <a
+                href="#sealed-cover-game"
+                className="px-5 py-2.5 text-sm font-medium border border-border rounded-lg hover:border-gold hover:text-gold transition-colors"
+              >
+                Sealed Cover Game
+              </a>
+              <a
                 href="#revolving-door"
                 className="px-5 py-2.5 text-sm font-medium bg-gold text-background rounded-lg hover:bg-gold/90 transition-colors"
               >
@@ -94,6 +102,7 @@ export default function Home() {
       <FadeIn><RevolvingDoor /></FadeIn>
       <FadeIn><FIQSection /></FadeIn>
       <FadeIn><WallOfShame /></FadeIn>
+      <FadeIn><SealedCoverGame /></FadeIn>
 
       <section id="sources" className="border-b border-border py-16" aria-label="Sources and references">
         <div className="max-w-4xl mx-auto px-4">
@@ -193,6 +202,7 @@ export default function Home() {
         </div>
       </section>
 
+      <WordOfTheDay />
       <ContemptNotice />
       <FloatingGavel />
       <JusticeClock />

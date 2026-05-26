@@ -59,6 +59,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  manifest: "/manifest.json",
   other: {
     "theme-color": "#0c0f1a",
   },
@@ -74,7 +75,8 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.remove("light")}catch(e){}`,
+            __html: `try{if(localStorage.getItem("theme")==="dark")document.documentElement.classList.remove("light")}catch(e){}
+if("serviceWorker"in navigator){navigator.serviceWorker.register("/sw.js").catch(()=>{})}`,
           }}
         />
       </head>

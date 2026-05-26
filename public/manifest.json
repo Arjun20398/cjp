@@ -1,0 +1,19 @@
+{
+  "name": "Cheap Justice of India",
+  "short_name": "CJI",
+  "description": "They judge you. We judge them. Real facts about India's judiciary delivered with satirical honesty.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0f1a",
+  "theme_color": "#c5a44e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["news", "satire", "education"]
+}

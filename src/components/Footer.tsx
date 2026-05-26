@@ -25,6 +25,7 @@ export default function Footer() {
                 { href: "#revolving-door", label: "Revolving Door" },
                 { href: "#fiqs", label: "FIQs" },
                 { href: "#wall", label: "Wall of Shame" },
+                { href: "#sealed-cover-game", label: "Sealed Cover Game" },
               ].map((link) => (
                 <li key={link.href}>
                   <a
