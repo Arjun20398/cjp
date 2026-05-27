@@ -5,7 +5,10 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Cheap Justice of India — They judge you. We judge them.",
+  title: {
+    default: "Cheap Justice of India — They judge you. We judge them.",
+    template: "%s | Cheap Justice of India",
+  },
   description:
     "Real facts about judicial corruption in India — 4.9 crore pending cases, 8,600+ complaints in 10 years, judges moving to politics. Exposed with satirical honesty.",
   metadataBase: new URL("https://cheapjusticeofindia.com"),
@@ -41,6 +44,10 @@ export const metadata: Metadata = {
       "4.9 crore pending cases. 8,600+ complaints. Judges turning politicians. Real facts, satirical tone.",
   },
   keywords: [
+    "cheap justice of india",
+    "cheapjusticeofindia",
+    "cheap justice of india website",
+    "cheap justice india satire",
     "Indian judiciary corruption",
     "judicial corruption India",
     "Supreme Court India corruption",
@@ -48,13 +55,13 @@ export const metadata: Metadata = {
     "judiciary satire India",
     "judicial accountability India",
     "revolving door judiciary",
-    "cheap justice India",
     "judges corruption India",
     "collegium system India",
     "judicial complaints India",
     "Indian courts backlog",
-    "CJI corruption",
     "judge impeachment India",
+    "india judiciary memes",
+    "judiciary roast india",
   ],
   icons: {
     icon: "/favicon.svg",

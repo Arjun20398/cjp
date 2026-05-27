@@ -33,10 +33,16 @@ const jsonLd = {
     {
       "@type": "Organization",
       name: "Cheap Justice of India",
+      alternateName: ["CheapJusticeOfIndia", "Cheap Justice India", "CJI Satire"],
       url: "https://cheapjusticeofindia.com",
       logo: "https://cheapjusticeofindia.com/favicon.svg",
       description:
         "A satirical publication exposing corruption, loopholes, and conflicts of interest in India's judiciary using real, sourced facts.",
+      sameAs: [
+        "https://www.reddit.com/r/cheapjusticeofindia/",
+        "https://www.instagram.com/cheapjusticeforindia/",
+        "https://www.youtube.com/@CheapJusticeOfIndia",
+      ],
     },
   ],
 };
