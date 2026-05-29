@@ -10,6 +10,7 @@ function generateSitemap() {
     { loc: "/", priority: "1.0", changefreq: "weekly" },
   ];
 
+
   if (fs.existsSync(CONTENT_DIR)) {
     const files = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".mdx"));
     for (const file of files) {
@@ -17,7 +18,7 @@ function generateSitemap() {
       const { data } = matter(raw);
       const slug = file.replace(".mdx", "");
       pages.push({
-        loc: `/articles/${slug}`,
+        loc: `/articles/${slug}/`,
         priority: "0.8",
         changefreq: "monthly",
         lastmod: data.date || undefined,

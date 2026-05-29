@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const article = getArticleContent(slug);
   if (!article) return { title: "Not Found" };
-  const url = `https://cheapjusticeofindia.com/articles/${slug}`;
+  const url = `https://cheapjusticeofindia.com/articles/${slug}/`;
   return {
     title: `${article.meta.title} — Cheap Justice of India`,
     description: article.meta.description,
@@ -49,7 +49,7 @@ export default async function ArticlePage({ params }: Props) {
       name: "Cheap Justice of India",
       url: "https://cheapjusticeofindia.com",
     },
-    mainEntityOfPage: `https://cheapjusticeofindia.com/articles/${slug}`,
+    mainEntityOfPage: `https://cheapjusticeofindia.com/articles/${slug}/`,
     keywords: article.meta.tags,
   };
 
